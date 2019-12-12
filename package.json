@@ -164,7 +164,8 @@
     "mkdirp": "~0.5.1",
     "request": "~2.88.0",
     "streamify": "~0.2.9",
-    "universalify": "~0.1.2"
+    "universalify": "~0.1.2",
+    "electron-util": "~0.13.0"
   },
   "devDependencies": {
     "@commitlint/cli": "latest",
