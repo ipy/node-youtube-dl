@@ -1,5 +1,5 @@
 {
-  "name": "youtube-dl",
+  "name": "@splayer/youtube-dl",
   "description": "youtube-dl driver for node",
   "homepage": "https://github.com/przemyslawpluta/node-youtube-dl#readme",
   "version": "2.3.0",
@@ -167,8 +167,8 @@
     "youtube"
   ],
   "dependencies": {
-    "electron-util": "~0.13.0",
     "debug": "~4.1.1",
+    "electron-util": "~0.13.0",
     "execa": "~3.2.0",
     "hh-mm-ss": "~1.2.0",
     "mkdirp": "~0.5.1",
