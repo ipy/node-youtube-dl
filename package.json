@@ -2,7 +2,7 @@
   "name": "@splayer/youtube-dl",
   "description": "youtube-dl driver for node",
   "homepage": "https://github.com/przemyslawpluta/node-youtube-dl#readme",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "main": "./lib/youtube-dl.js",
   "author": {
     "name": "Roly Fentanes",
@@ -195,6 +195,7 @@
   },
   "files": [
     "lib",
+    "prebuilt",
     "scripts"
   ],
   "scripts": {
