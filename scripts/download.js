@@ -34,7 +34,7 @@ if (fs.existsSync(path.join(__dirname, '../prebuilt/', executableName))) {
     path.join(__dirname, '../bin/', detailsName)
   )
   deleteFolderRecursive(path.join(__dirname, '../prebuilt/'))
-} else {
+} else if (!fs.existsSync(path.join(__dirname, '../bin/', executableName))) {
   downloader(function error (err, done) {
     if (err) return console.log(err.stack)
     console.log(done)
