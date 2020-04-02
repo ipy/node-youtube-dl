@@ -25,14 +25,20 @@ const detailsName = 'details'
 
 if (fs.existsSync(path.join(__dirname, '../prebuilt/', executableName))) {
   mkdirp.sync(path.join(__dirname, '../bin/'))
+
   fs.renameSync(
     path.join(__dirname, '../prebuilt/', executableName),
     path.join(__dirname, '../bin/', executableName)
   )
-  fs.renameSync(
-    path.join(__dirname, '../prebuilt/', detailsName),
-    path.join(__dirname, '../bin/', detailsName)
+  const details = JSON.parse(
+    fs.readFileSync(path.join(__dirname, '../prebuilt/', detailsName))
   )
+  if (isWin && !details.exec.endsWith('.exe')) details.exec += '.exe'
+  fs.writeFileSync(
+    path.join(__dirname, '../bin/', detailsName),
+    JSON.stringify(details)
+  )
+
   deleteFolderRecursive(path.join(__dirname, '../prebuilt/'))
 } else if (!fs.existsSync(path.join(__dirname, '../bin/', executableName))) {
   downloader(function error (err, done) {
